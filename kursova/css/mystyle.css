@@ -1,0 +1,246 @@
+﻿body
+{
+	background-color: #151424;
+	background-image: url('../images/bg0000001.jpg');
+	background-repeat: no-repeat;
+	color: #646464;
+	font-family: Tahoma;
+	font-size: 12px;
+	margin: 0;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.maindiv
+{
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding: 0;
+	width: 900px;
+}
+#forbody
+{
+	padding: 20px;
+}
+#main_h1
+{
+	color: #2C2C2C;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+h2
+{
+	color: #2C2C2C;
+	font-size: 15px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+p
+{
+	margin-left: 0;
+}
+p strong
+{
+	color: #2C2C2C;
+}
+h3
+{
+	color: #2C2C2C;
+}
+.mototable
+{
+	border: 1px solid #cccccc;
+	margin-top: 15px;
+}
+.mototable thead tr
+{
+	background-color: #f6f6f6;
+	height: 20px;
+	padding-left: 20px;
+}
+.mototable tbody tr td
+{
+	padding-left: 20px;
+	text-align: left;
+}
+#myform div
+{
+	margin: 20px;
+}
+#bigform
+{
+	width: 850px;
+}
+#bigform span
+{
+	color: #2c2c2c;
+	font-size: 11px;
+}
+#div_form_1
+{
+	float: right;
+	width: 420px;
+}
+#div_form_2
+{
+	width: 420px;
+}
+#div_form_1 #days
+{
+	margin-left: 15px;
+}
+#my_button, select
+{
+	background-color: #f6f6f6;
+	border: 1px solid #cccccc;
+	color: #2C2C2C;
+	font-size: 11px;
+	margin-left: 3px;
+}
+a
+{
+	color: #505391;
+}
+fieldset
+{
+	background-color: #e7e7f0;
+	border: 1px solid #cccccc;
+	padding: 15px;
+	width: 825px;
+}
+#innerfieldset
+{
+	background-color: #f6f6f6;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+	width: 385px;
+}
+legend
+{
+	color: #2c2c2c;
+	font-size: 11px;
+}
+input
+{
+	background-color: #f6f6f6;
+	border: 1px solid #cccccc;
+	font-size: 11px;
+}
+textarea
+{
+	background-color: #f6f6f6;
+	border: 1px solid #cccccc;
+}
+#sale
+{
+	margin-top: 20px;
+}
+.new
+{
+	border:1px solid silver;
+	background:#e4d7e8;
+	padding:5px 5px 5px 5px;
+}
+.my1
+{
+	border:2px solid #cc0000;
+	width:850px;
+	height:160px;	
+}
+#small {
+    margin-top: 10px;
+    margin-left: 33px;
+     
+}
+
+#small a img{
+    border:none;
+     
+}
+.container {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+align-items: baseline;
+}
+.gallery-item{
+flex-basis: 25%;
+margin: 0px;
+}
+.gallery-item img{
+width: 100%
+}
+.overlay{
+background-color: black;
+position: fixed;
+overflow:hidden;
+width: 100vw;
+height: 100vh; 
+display: none;
+}
+.overlay.chosen{
+display: block;
+top: 0;
+left: 0;
+
+}
+.close-window{
+color: white;
+/* height: */
+}
+
+.chosen{
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+margin: 0;
+text-align:center;
+}
+.chosen img{
+margin: 100px;
+max-width: 70%;
+height: 70%;
+}
+.left-window{
+color: white;
+margin: 0 auto;
+}
+.right-window{
+color: white;
+margin: 0 auto;
+}
+.close-window:hover {
+color:red;
+}
+.right-window:hover {
+color: aqua;
+}
+.left-window:hover {
+color: aqua;
+}
+/*Галерея*/
+.buttom3 {
+color: darkblue;
+text-align: justify;
+font-size: 24px;
+font-family: Cuprum, Arial, Helvetical, sans-serif;
+letter-spacing: 1px;
+margin: 0;
+}
+.yer1 {
+color: darkblue;
+text-align: left;
+font-size: 30px;
+font-family: Cuprum, Arial, Helvetical, sans-serif;
+font-weight: bold;
+}
+.buttom16 p{
+color: darkred;
+text-align: left;
+font-size: 24px;
+font-family: Cuprum, Arial, Helvetical, sans-serif;
+letter-spacing: 1px;
+margin: 0;
+}
+

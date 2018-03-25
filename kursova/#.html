@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+		<title>Отель Дубай</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+		<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	
+	
+<script>
+		$(function() {
+		var chosen = false,
+		num = 0,
+		newId;
+		$(document).keydown(function(e){
+		console.log(e)
+		if((e.keyCode === 27) && (chosen = true)){
+			$('.overlay').find("img").remove();
+			$('.overlay').removeClass("chosen");
+			$("body").css('overflow', 'visible');
+			console.log("closed");
+			chosen = false;
+		}
+	})
+		$(document).keydown(function(e){
+				if((e.keyCode === 37) && (chosen = true)){
+				$('.overlay').find("img").attr("id", "photo_" + num);
+				$("#photo_" + num).remove();
+				num--;
+		if (num < 1) {num = 4;};
+			$("#img_" + num).clone().appendTo('.overlay');} 
+	})
+		$(document).keydown(function(e){
+		if((e.keyCode === 39) && (chosen = true)){
+	$('.overlay').find("img").attr("id", "photo_" + num);
+	$("#photo_" + num).remove();
+	num++;
+		if (num > 4) {num = 1;};
+	$("#img_" + num).clone().appendTo('.overlay');} 
+	})
+		$(".gallery-item").click(function() {
+		console.log("opened");
+		$(this).clone().appendTo('.overlay');
+		num = $(this).find("img").attr("id").split("_")[1]
+		$('.overlay').find("img").attr("id", "photo_" + num);
+		console.log($(this).find("img").attr("id"));
+		$('.overlay').addClass("chosen");
+		chosen = true;
+		$("body").css('overflow', 'hidden');
+		console.log($(this));
+	})
+
+
+		$(".close-window").click(function() {
+		$('.overlay').find("img").remove();
+		$('.overlay').removeClass("chosen");
+		$("body").css('overflow', 'visible');
+		console.log("closed");
+		chosen = false;
+	});
+$("#img_1").css("display", "inline-block");
+
+		$(".left-window").click(function() {
+		$('.overlay').find("img").attr("id", "photo_" + num);
+		$("#photo_" + num).remove();
+		num--;
+		if (num < 1) {
+		num = 4;
+	};
+	$("#img_" + num).clone().appendTo('.overlay');
+	});
+
+	$(".right-window").click(function() {
+	$('.overlay').find("img").attr("id", "photo_" + num);
+	$("#photo_" + num).remove();
+	num++;
+	if (num < 1) {
+	num = 4;
+};
+$("#img_" + num).clone().appendTo('.overlay');
+	});
+	var changed = $("#forheader");
+	changed.hide(3000).show(3000);
+});
+</script>
+		<div class="maindiv" id="main_div">
+			<p id="w_h" align='center'></p>
+			<div id="forbody">
+				<h1 id="main_h1">Добро пожаловать на сайт отеля в Дубаи!</h1>
+				<p id='abzac1'><span class="pq">Дубай – город и эмират на побережье Персидского залива в Объединенных Арабских Эмиратах, который славится своими роскошными магазинами, ультрасовременной архитектурой, ресторанами и ночными клубами. Силуэт города формируют бесчисленные небоскребы, в том числе Бурдж-Халифа высотой 830 метров. У его основания расположен музыкальный фонтан "Дубай", подсвеченный прожекторами. На искусственном острове рядом с побережьем находится курорт Atlantis The Palm с аквапарком и парком морских животных.</p>
+			<div class='container'>
+				<div class="gallery-item"><img src="images/1.jpg" alt="image" id="img_1" ></div>
+				<div class="gallery-item"><img src="images/2.jpg" alt="image" id="img_2" ></div>
+				<div class="gallery-item"><img src="images/3.jpg" alt="image" id="img_3" ></div>
+				<div class="gallery-item"><img src="images/4.jpg" alt="image" id="img_4" ></div>
+			</div>
+	
+			
+				<p><strong>На данный момент свободны такие номера как:</strong></p>
+				<ol id="moto_models">
+					<li>Стандартный</li>
+					<li>С видом на океан</li>
+					<li>Премиальный</li>
+					<li>Елитный с золотой мебелью</li>
+				</ol>
+
+				<h3>Рассчет стоимости проживания в номерах:</h3>
+				<form action="form.php" id="my_form">
+					<div id="bigform">
+						<fieldset>
+							<div id="div_form_1">
+								<fieldset id="innerfieldset">
+									<legend>Дополнения</legend>
+									<p><strong>Список дополнений:</strong></p>
+									<div id="format">
+										<input type="checkbox" value="sh" name="dop_oprions" id="shlem" />
+										<label for="shlem">Всё включенно</label>
+										<input type="checkbox" value="bag" name="dop_oprions" id="bag" />
+										<label for="bag">Обед,ужин,завтрак в номер</label>
+										<input type="checkbox" value="od" name="dop_oprions" id="od" />
+										<label for="od">Масаж</label>
+									</div>
+									<p><strong>Нужна ли дополнительная кровать?</strong></p>
+									<div id="radio">
+										<input type="radio" id="inch_yes" value="yes" name="inch" />
+										<label for="inch">Да</label>
+										<input type="radio" id="inch_no" value="no" name="inch" />
+										<label for="inch">Нет</label>
+									</div>
+								</fieldset>
+								<input type="submit" value="Забронировать" id="my_button" />
+							</div>
+							<div id="div_form_2">
+								<span>Номер:</span>
+								<select name="moto" size="1" id="motoSelect">
+									<option value="1">обычний (15 964 грн. в день)</option>
+									<option value="2">с видом на океан (18 790 грн. в день)</option>
+									<option value="3">премиум (35 155 грн. в день) option>
+									<option value="4">елитная квартира (79 450 грн. в день)</option>
+								</select>
+								<span>Дней:</span>
+								<select name="days" size="1" id="daysSelect">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="2">3</option>
+									<option value="2">4</option>
+									<option value="2">5</option>
+									<option value="2">6</option>
+									<option value="2">неделя</option>
+									<option value="2">1 неделя</option>
+									<option value="2">2 недели</option>
+									<option value="2">месяц</option>
+
+
+									
+								</select>
+								<p><strong>Укажите ваш номер:</strong></p>
+								<input type="text" id="email" value="Пример: +932*********" /> 
+								<p><strong>Ваши пожелания:</strong></p>
+								<textarea cols="45" rows="2" id="mytextarea"></textarea>
+							</div>
+						</fieldset>
+					</div>
+				</form>
+				
+				
+					
+				</table>
+				<div id="forresults"></div>
+			</div>
+			
+		</div>
+	</body>
+</html>
